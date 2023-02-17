@@ -20,11 +20,16 @@
   --neutral-color1-style:hsl(212, 21%, 14%); /*Very dark blue:*/ 
   --neutral-color2-style:hsl(228, 12%, 48%); /*Dark grayish blue:*/ 
   --neutral-color3-style:hsl(0, 0%, 100%); /*White: */
+  --max-width: 800px;
 }
 
 * {
   box-sizing: border-box;
 } 
+
+body {
+  margin: 0;
+}
 
 a {
   text-decoration: none;
@@ -35,8 +40,8 @@ input {
   border-style: none;
 }
 
-.card-content {
-
+img {
+  width: 100%;
 }
 
 body {
@@ -48,7 +53,79 @@ h1, h2, h3 {
   color: var(--neutral-color1-style);
 }
 
+/* layout */
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5em;
+  min-height: 100vh; /*viewport height*/
+  font-size: 14px;
+  background-color: var(--primary-color2-style);
+}
+
+.card {
+  display: flex; 
+  width: var(--max-width);
+
+}
+
+.card > * {
+  width: 50%;
+}
+
+/* styles */
+
+.card-image {
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1em;
+  background-color: var(--neutral-color3-style);
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+}
+
 .card-content::before {
   content: "Perfume";
   text-transform: uppercase;
 }
+
+.card-title {
+  margin: 0;
+}
+
+.card-text {
+  line-height: 2em;
+}
+
+.card-price strong {
+  margin-right: .5em;
+  color: var(--primary-color1-style);
+  font-size: xx-large;
+}
+.card-price del {
+  font-size: small;
+}
+
+.card-button {
+  width: 100%;
+  padding: .5em 0;
+  background-color: var(--primary-color1-style);
+  color: var(--neutral-color3-style);
+  border-radius: .5em;
+}
+
+.icon-card {
+  position: relative;
+  left: -.3em;
+  top: .1em;
+  width: fit-content;
+}
+
