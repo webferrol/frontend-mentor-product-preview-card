@@ -1,0 +1,54 @@
+/* Reset */
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat italic';
+  src: url(../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url(../fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+}
+
+:root {
+  --primary-color1-style: hsl(158, 36%, 37%); /*Dark cyan:*/ 
+  --primary-color2-style: hsl(30, 38%, 92%); /*Cream:*/
+  --neutral-color1-style:hsl(212, 21%, 14%); /*Very dark blue:*/ 
+  --neutral-color2-style:hsl(228, 12%, 48%); /*Dark grayish blue:*/ 
+  --neutral-color3-style:hsl(0, 0%, 100%); /*White: */
+}
+
+* {
+  box-sizing: border-box;
+} 
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  border-style: none;
+}
+
+.card-content {
+
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  color: var(--neutral-color1-style);
+}
+
+.card-content::before {
+  content: "Perfume";
+  text-transform: uppercase;
+}
